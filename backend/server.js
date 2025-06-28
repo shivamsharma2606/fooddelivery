@@ -12,7 +12,17 @@ const port =4000
 
 //middleware
 app.use(express.json())
-app.use(cors())
+const allowedOrigins = ['https://admin-fooddelivery.vercel.app', 'https://site2.com'];
+
+app.use(cors({
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
+}));
 
 
 //db connection
