@@ -1,0 +1,128 @@
+/* Main container (adjusted to center inside layout) */
+.Add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  background-color: #fff5f2; /* Soft tomato background */
+  box-sizing: border-box;
+}
+
+/* Form styling */
+.Add form {
+  width: 100%;
+  max-width: 420px;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(255, 99, 71, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Flex-column utility */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Label */
+.Add p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Upload section */
+.add-image-upload label {
+  width: 100%;
+  height: 120px;
+  border: 2px dashed #ff6347;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff3f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-image-upload label:hover {
+  background-color: #ffe6e1;
+}
+
+.add-image-upload img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Inputs, textarea, select */
+.add-product-name input,
+.add-product-discription textarea,
+.add-category select,
+.add-price input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.add-product-name input:focus,
+.add-product-discription textarea:focus,
+.add-category select:focus,
+.add-price input:focus {
+  border-color: #ff6347;
+  outline: none;
+}
+
+/* Description textarea */
+.add-product-discription textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Category + Price side-by-side */
+.add-category-price {
+  display: flex;
+  gap: 15px;
+}
+
+.add-category,
+.add-price {
+  flex: 1;
+}
+
+/* Dropdown with arrow icon */
+.add-category select {
+  appearance: none;
+  background: url("data:image/svg+xml;utf8,<svg fill='%23333' height='10' width='10' viewBox='0 0 10 5'><path d='M0 0h10L5 5z'/></svg>") no-repeat right 10px center;
+  background-color: #ffffff;
+  cursor: pointer;
+  color: #000;
+}
+
+/* Submit Button */
+.add-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #ff6347;
+  color: #000000;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-btn:hover {
+  background-color: #e6523b;
+}

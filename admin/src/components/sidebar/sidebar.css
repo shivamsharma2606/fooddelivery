@@ -1,0 +1,75 @@
+/* Sidebar container */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #ffffff; /* White background */
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e0e0e0; /* Subtle border on the right */
+    position: fixed;
+    top: 80px;
+        left: 0;
+  }
+  
+  /* Sidebar options container */
+  .sidebar-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between options */
+  }
+  
+  /* Individual sidebar option */
+  .sidebar-option {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease; /* Smooth transition for hover */
+  }
+  
+  /* Hover and active state (like the pink highlight in the image) */
+   
+  .sidebar-option.active {
+    background-color: #fff0ed;
+    border-color: tomato; /* Light pink background */
+  }
+  
+  /* Icon styling */
+  .sidebar-option img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }
+  
+  /* Text styling */
+  .sidebar-option p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333; /* Dark text */
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 180px;
+      padding: 15px 8px;
+    }
+  
+    .sidebar-option {
+      padding: 8px 12px;
+    }
+  
+    .sidebar-option p {
+      font-size: 13px;
+    }
+  
+    .sidebar-option img {
+      width: 18px;
+      height: 18px;
+    }
+  }

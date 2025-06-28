@@ -1,0 +1,132 @@
+/* Tomato color theme with animations and transitions */
+.login-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent backdrop */
+    z-index: 1000;
+    animation: fadeIn 0.3s ease-in-out; /* Fade-in animation for the popup */
+}
+
+.login-popup-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid #ff6347; /* Tomato border */
+}
+
+.login-popup-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.login-popup-title h2 {
+    color: #ff6347; /* Tomato color for the title */
+    font-size: 24px;
+    margin: 0;
+}
+
+.login-popup-title img {
+    width: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Smooth scaling transition for the close icon */
+}
+
+.login-popup-title img:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+.login-popup-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.login-popup-inputs input {
+    padding: 10px;
+    border: 1px solid #ff6347; /* Tomato border for inputs */
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for input focus */
+}
+
+.login-popup-inputs input:focus {
+    border-color: #ff4500; /* Darker tomato shade on focus */
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5); /* Glow effect */
+}
+
+button {
+    background-color: #ff6347; /* Tomato background for the button */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth button transitions */
+}
+
+button:hover {
+    background-color: #ff4500; /* Darker tomato shade on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button:active {
+    transform: translateY(0); /* Reset lift on click */
+}
+
+.login-popup-condition {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.login-popup-condition input {
+    cursor: pointer;
+}
+
+.login-popup-condition p {
+    font-size: 14px;
+    color: #333;
+}
+
+.login-popup p {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+.login-popup span {
+    color: #ff6347; /* Tomato color for the clickable span */
+    cursor: pointer;
+    transition: color 0.3s ease; /* Smooth color transition for span */
+}
+
+.login-popup span:hover {
+    color: #ff4500; /* Darker tomato shade on hover */
+}
+
+/* Fade-in animation for the popup */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
