@@ -13,8 +13,9 @@ const port =4000
 //middleware
 app.use(express.json())
 const allowedOrigins = [
-  'https://admin-fooddelivery.vercel.app', 
-  'https://fooddelivery-chi-swart.vercel.app'
+  'https://admin-fooddelivery.vercel.app',
+  'https://fooddelivery-chi-swart.vercel.app',   // Add this frontend link
+  'https://site2.com'
 ];
 
 app.use(cors({
