@@ -12,7 +12,10 @@ const port =4000
 
 //middleware
 app.use(express.json())
-const allowedOrigins = ['https://admin-fooddelivery.vercel.app', 'https://site2.com'];
+const allowedOrigins = [
+  'https://admin-fooddelivery.vercel.app', 
+  'https://fooddelivery-chi-swart.vercel.app'
+];
 
 app.use(cors({
   origin: (origin, callback) => {
