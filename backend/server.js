@@ -13,7 +13,7 @@ const port =4000
 //middleware
 app.use(express.json())
  // npm install cors
-const cors = require('cors');
+ 
 app.use(cors({
   origin: '*' // or specify your frontend URL for better security
 }))
@@ -24,7 +24,9 @@ app.use(cors({
 connectDB();
 
 //api ednpoint
-
+app.get("/",(req,res)=>{
+  res.send("hello wolrd")
+})
 app.use("/api/food",foodRouter)
 app.use("/images",express.static('uploads'))
 app.use("/api/user",userRouter)
