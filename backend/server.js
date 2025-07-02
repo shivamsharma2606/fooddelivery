@@ -12,23 +12,12 @@ const port = 4000;
 
 app.use(express.json());
 
-const allowedOrigins = [
-  'https://admin-fooddelivery.vercel.app', 
-  'https://fooddelivery-chi-swart.vercel.app'
-];
-
+// ✅ Open CORS for testing (Not recommended for production)
 app.use(cors({
-  origin: (origin, callback) => {
-    // Agar origin blank hai (Postman ya server-side call), ya allowed list me hai to allow karo
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE"]
+  origin: '*'
 }));
+
+ 
 
 connectDB();
 
