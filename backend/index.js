@@ -14,12 +14,9 @@ const port =4000
 app.use(express.json())
  // npm install cors
  
-app.use(cors({
-  origin: '*' // or specify your frontend URL for better security
-}))
+app.use(cors())
 
 
-//db connection
 
 connectDB();
 
