@@ -8,7 +8,7 @@ const StoreContextProvider = (props) => {
     const [cartItems, setCartItems] = useState({});
     const [token, setToken] = useState("");
     const [food_list, setFoodList] = useState([]);
-    const url = "https://api-fooddelivery.vercel.app";
+    const url = "https://fooddelivery-6oee.onrender.com";
 
     // ✅ Load token from localStorage when component mounts
     useEffect(() => {
